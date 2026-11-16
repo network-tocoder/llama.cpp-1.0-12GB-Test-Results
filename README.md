@@ -2,7 +2,7 @@
 
 ![llama.cpp](https://img.shields.io/badge/llama.cpp-v1.0.0-orange) ![GPU](https://img.shields.io/badge/GPU-RTX%204070%20Super%2012GB-76b900) ![Model](https://img.shields.io/badge/Model-Swift%201.5%20125B-blue) ![Cost](https://img.shields.io/badge/Cloud%20API-%240-brightgreen)
 
-📺 **Video:** [Two Flags Made llama.cpp 1.0 Way Faster (12GB GPU)](https://youtube.com/@NetworkCoder) *(add the video link)*
+📺 **Video:** [llama.cpp 1.0 Is Out: Double Your AI Speed Now](https://www.youtube.com/watch?v=msCLKGh3zWY) *(add the video link)*
 
 I updated to llama.cpp 1.0 and got **exactly the same speed** as before. Then I changed two flags.
 
