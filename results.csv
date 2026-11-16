@@ -1,0 +1,16 @@
+test,load_mode,moe_cache_mib,cpu_share,extra,write_run1,write_run2,write_run3,read_16k_tok_s,note
+t1_default,mmap,0,0,,16.6,16.3,16.3,107,just upgraded
+t2_cache_s0,mmap,5000,0,,19.4,18.9,16.8,119,cache churns on topic change
+t3_s05,mmap,5000,0.5,,19.1,17.6,17.2,116,
+t3_s095,mmap,5000,0.95,,20.7,24.9,24.7,118,+52% write vs default
+t4_none_s095,none,5000,0.95,,23.9,23.8,22.1,199,
+t4_mlock_s095,mlock,5000,0.95,,20.1,21.3,20.1,199,
+t4_none_s0,none,5000,0,,26.7,27.1,25.8,201,best all-round
+t8_none_s0_spec,none,5000,0,--spec-default,25.1,27.2,26.1,202,draft mode: no gain
+t10_none_s0_t40,none,5000,0,-t 40,27.8,27.3,26.3,202,within noise
+t5_tuned,mmap,4864,0.8,,20.7,21.0,20.8,118,tool predicted 26.7
+final_recipe,none,4864,0,-t 40,27.0,26.3,25.9,201,tool predicted 29.6
+t7_ub2048,mmap,5000,0.95,-ub 2048 -b 2048,,,,,out of GPU memory (needs +1.5 GB)
+kv_f16,none,0,0,-ctk f16,,,,,GPU 7514 MiB at 64K ctx
+kv_q8_0,none,0,0,-ctk q8_0,,,,,GPU 6626 MiB at 64K ctx
+kv_f8_e4m3,none,0,0,-ctk f8_e4m3,,,,,not supported for architecture qwen4exp
